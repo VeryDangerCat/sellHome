@@ -54,12 +54,18 @@ body{
   margin-left: 20px;
   margin-bottom: 5px;
 }
+.description__title__txt {
+  font-weight: 400;
+}
 .description, .map__container{
   height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 7px;
+}
+.description{
+  height: auto;
 }
 .content, .map__container__content{
   width: 95%;
@@ -71,10 +77,41 @@ body{
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+.content{
+  height: auto;
+  padding: 7px;
+}
+.content__blockFirst, .content__blockSecond{
+  padding: 7px;
+  border-radius: 10px;
+  background: #9dfcc1;
+}
+.content p{
+  color: #000000;
+  font-weight: 600;
+  font-size: 13px;
+}
 .map__container__content{
  display: flex;
  justify-content: space-around;
  align-items: center;
+}
+.map__container__content__phone__container{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.map__container__content__phone__container__phoneNumber{
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+}
+.map__container__content__phone__container__phoneNumber:hover{
+  color: #b2b2b2;
+}
+.map__container__content__img{
+  width: 14px;
 }
 .map{
   width: 60vw;
@@ -83,6 +120,17 @@ body{
 }
 .map__title{
   color: #05386B;
+}
+@media screen and (min-width: 600px) {
+  .map__container__content__phone__container__phoneNumber{
+    font-size: 17px;
+  }
+  .map__container__content__img{
+    width: 20px;
+  }
+  .content p{
+    font-size: 17px;
+  }
 }
 @media screen and (min-width: 900px) {
   body{
@@ -105,8 +153,15 @@ body{
     margin-top: 23px;
     width: 900px;
   }
+  .description__title__txt {
+    font-size: 17px;
+    font-weight: 600;
+  }
   .map__container{
     width: 900px;
+  }
+  .map__container__content__phone__container__phoneNumber{
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1000px) {
